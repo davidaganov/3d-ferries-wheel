@@ -4,7 +4,7 @@ import { OrbitControls } from "@react-three/drei"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 
 const FerrisWheel = () => {
-  const { scene } = useLoader(GLTFLoader, "/ferris_wheel/scene.gltf")
+  const { scene } = useLoader(GLTFLoader, "./ferris_wheel/scene.gltf")
 
   return (
     <Suspense>

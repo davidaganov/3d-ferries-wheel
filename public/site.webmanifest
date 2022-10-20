@@ -1,8 +1,8 @@
 {
-  "name": "Aganov. Frontend Developer",
-  "short_name": "Aganov",
+  "name": "Ferries Wheel 3D",
+  "short_name": "Ferries Wheel 3D",
   "lang": "en",
-  "description": "I’m frontend developer. I like to learn new technologies and try new things in every possible way.",
+  "description": "3D model of the Ferris wheel.",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -18,5 +18,5 @@
   "theme_color": "#3d294f",
   "background_color": "#3d294f",
   "display": "standalone",
-  "start_url": "https://aganov.dev/"
+  "start_url": "https://aganov.dev/3d-ferries-wheel"
 }

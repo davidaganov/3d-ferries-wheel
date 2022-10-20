@@ -3,6 +3,7 @@
   "description": "3D model of the Ferris wheel",
   "version": "0.1.0",
   "private": false,
+  "homepage": "./",
   "repository": "https://github.com/davidaganov21/3d-ferris-wheel",
   "license": "MIT",
   "author": {
