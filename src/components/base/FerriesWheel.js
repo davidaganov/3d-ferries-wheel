@@ -1,5 +1,6 @@
 import { Suspense } from "react"
-import { Canvas, useLoader, useThree } from "react-three-fiber"
+import { useLoader, useThree } from "react-three-fiber"
+import { Controls, useControl } from "react-three-gui"
 import { OrbitControls } from "@react-three/drei"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import Title from "./Title"
@@ -8,7 +9,7 @@ const Spinner = () => {
   return <p className="spinner">Loading...</p>
 }
 
-const FerrisWheelModel = () => {
+const Model = () => {
   const { scene } = useLoader(GLTFLoader, "./ferris_wheel/scene.gltf")
 
   return (
@@ -21,23 +22,62 @@ const FerrisWheelModel = () => {
 }
 
 const Lights = () => {
+  const pointX = useControl("Position X", {
+    group: "Point Light",
+    type: "number",
+    min: -50,
+    max: 50
+  })
+  const pointY = useControl("Position Y", {
+    group: "Point Light",
+    type: "number",
+    min: -50,
+    max: 50
+  })
+
+  const spotX_one = useControl("Position X", {
+    group: "First Spot Light",
+    type: "number",
+    min: -50,
+    max: 50
+  })
+  const spotY_one = useControl("Position Y", {
+    group: "First Spot Light",
+    type: "number",
+    min: -50,
+    max: 50
+  })
+
+  const spotX_second = useControl("Position X", {
+    group: "Second Spot Light",
+    type: "number",
+    min: -50,
+    max: 50
+  })
+  const spotY_second = useControl("Position Y", {
+    group: "Second Spot Light",
+    type: "number",
+    min: -50,
+    max: 50
+  })
+
   return (
     <>
       <pointLight
         intensity={0.7}
-        position={[0, 15, -2]}
+        position={[pointX, pointY, -2]}
         color="#D4479D"
       />
       <spotLight
         color="#FF2323"
         intensity={0.5}
-        position={[35, 10, -20]}
+        position={[spotX_one, spotY_one, -20]}
         angle={45}
       />
       <spotLight
         color="#C118D2"
         intensity={0.7}
-        position={[-30, -10, 20]}
+        position={[spotX_second, spotY_second, 20]}
         angle={55}
       />
     </>
@@ -52,7 +92,7 @@ const Scene = () => {
   return (
     <>
       <Lights />
-      <FerrisWheelModel />
+      <Model />
 
       <OrbitControls />
     </>
@@ -89,9 +129,17 @@ export default function FerrisWheel() {
         </p>
         <div className="model__container">
           <Suspense fallback={<Spinner />}>
-            <Canvas>
-              <Scene />
-            </Canvas>
+            <Controls.Provider>
+              <Controls.Canvas>
+                <Scene />
+              </Controls.Canvas>
+              <Controls
+                title="Lighting Control"
+                collapsed={true}
+                width={250}
+                anchor={"bottom_right"}
+              />
+            </Controls.Provider>
           </Suspense>
         </div>
       </div>
