@@ -10,6 +10,8 @@ export default function Footer() {
         <a
           href="https://github.com/davidaganov21/davidaganov21.github.io"
           className="footer__author inline-link inline-link--white"
+          target="_blank"
+          rel="noreferrer"
         >
           Developed & Designed&nbsp;
           <br />
@@ -19,6 +21,8 @@ export default function Footer() {
         <a
           className="footer__email inline-link inline-link--white"
           href="mailto:davidaganov21@gmail.com"
+          target="_blank"
+          rel="noreferrer"
         >
           davidaganov21@gmail.com
         </a>

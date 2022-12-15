@@ -5,6 +5,8 @@ export default function Social({ classes }) {
         <a
           href="https://github.com/davidaganov21"
           className="social__link"
+          target="_blank"
+          rel="noreferrer"
           aria-label="Github profile"
         >
           <svg
@@ -27,6 +29,8 @@ export default function Social({ classes }) {
         <a
           href="https://www.linkedin.com/in/david-aganov/"
           className="social__link"
+          target="_blank"
+          rel="noreferrer"
           aria-label="Linkedin profile"
         >
           <svg

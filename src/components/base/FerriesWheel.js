@@ -107,9 +107,11 @@ export default function FerrisWheel() {
     >
       <div className="model__inner inner">
         <Title
-          classes="model__title"
+          className="model__title"
           title="Ferris Wheel 3D"
           link="#model"
+          number={1}
+          direction="ltr"
         />
         <p className="model__description">
           I have been interested in introducing 3D to websites for a long time and in the past my
