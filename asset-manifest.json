@@ -1,13 +1,20 @@
 {
   "files": {
-    "main.css": "./static/css/main.a9988665.css",
-    "main.js": "./static/js/main.e7e112f3.js",
+    "main.css": "./static/css/main.97f2666b.css",
+    "main.js": "./static/js/main.2d82f211.js",
+    "static/media/Barcade-Brawl.ttf": "./static/media/Barcade-Brawl.73895ecd83170778cce0.ttf",
+    "static/media/ua-brand-Bold.ttf": "./static/media/ua-brand-Bold.a02d6efaeade2323b233.ttf",
+    "static/media/ua-brand.ttf": "./static/media/ua-brand.bb72e528dddddb8680cb.ttf",
     "index.html": "./index.html",
-    "main.a9988665.css.map": "./static/css/main.a9988665.css.map",
-    "main.e7e112f3.js.map": "./static/js/main.e7e112f3.js.map"
+    "static/media/github.svg": "./static/media/github.407cb21c4040e9823345c5e860de4e34.svg",
+    "static/media/linkedin.svg": "./static/media/linkedin.af41967d17036467c6926220c912f4a7.svg",
+    "static/media/burger.svg": "./static/media/burger.21797a96af3ae80de2c46d085c1a3203.svg",
+    "static/media/close.svg": "./static/media/close.f75a22568d3eb06071fad4f1b60b8ba0.svg",
+    "main.97f2666b.css.map": "./static/css/main.97f2666b.css.map",
+    "main.2d82f211.js.map": "./static/js/main.2d82f211.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9988665.css",
-    "static/js/main.e7e112f3.js"
+    "static/css/main.97f2666b.css",
+    "static/js/main.2d82f211.js"
   ]
 }
