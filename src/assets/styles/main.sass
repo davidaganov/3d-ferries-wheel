@@ -1,14 +1,5 @@
 //---- Base
-@import "./__reset", "./__variables", "./__theme.sass"
-
-//---- Components
-@import "../../components/general/Navbar"
-@import "../../components/general/Header"
-@import "../../components/general/Footer"
-
-//---- Base
-@import "../../components/base/FerriesWheel"
-@import "../../components/base/Social"
+@import "./__reset", "./__variables", "./__theme", "./__fonts"
 
 html, body
   height: 100%
@@ -28,6 +19,52 @@ html
       ::-webkit-scrollbar-thumb
         background-color: var(--color-accent)
         box-shadow: 0 -100vh 0 100vh #835ea7, 0 0 15px 5px var(--color-black)
-body
-  display: flex
-  flex-direction: column
+
+*::selection
+  background-color: var(--color-accent)
+  color: var(--color-white)
+
+.container
+  .spinner
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100%
+    color: var(--color-white)
+    font: bold 3rem var(--main-font)
+  .sc-ksBlkl
+    z-index: 1
+  .sc-hBxehG //- Header
+    border-radius: 0
+    background: linear-gradient(152deg, #0c1e38 0%, #30203d 100%)
+    font-family: var(--second-font)
+    font-size: 1rem
+  .sc-fEXmlR //- Container
+    padding: 0
+  .sc-eDWCr //- Headline
+    background-color: var(--color-accent-300)
+    color: var(--color-white)
+    text-transform: none
+    font-family: var(--main-font)
+    &::before, &::after
+      top: 0
+      bottom: 0
+      margin: auto 0
+      background-color: var(--color-white)
+  .sc-bqWxrE //- Background
+    padding: .8rem
+    background-color: var(--color-black)
+    margin: 0
+  .sc-gswNZR //- Label
+    color: var(--color-accent)
+    font-family: var(--main-font)
+    width: 8rem
+  .sc-eDvSVe //- Input
+    background-color: var(--color-accent-300)
+    border-radius: 1rem
+    &::-webkit-slider-thumb
+      background-color: var(--color-accent)
+  .sc-hLBbgP //- Result
+    color: var(--color-white-700)
+    font-family: var(--main-font)

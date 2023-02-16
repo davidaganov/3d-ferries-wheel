@@ -3,7 +3,9 @@ import { useLoader, useThree } from "react-three-fiber"
 import { Controls, useControl } from "react-three-gui"
 import { OrbitControls } from "@react-three/drei"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
-import Title from "./Title"
+import { Title } from ".."
+import styles from "./FerriesWheel.module.sass"
+import cn from "classnames"
 
 const Spinner = () => {
   return <p className="spinner">Loading...</p>
@@ -99,28 +101,28 @@ const Scene = () => {
   )
 }
 
-export default function FerrisWheel() {
+export const FerrisWheel = () => {
   return (
     <section
-      className="model"
+      className={styles.model}
       id="model"
     >
-      <div className="model__inner inner">
+      <div className={cn(styles.modelInner, "inner")}>
         <Title
-          className="model__title"
+          className={styles.title}
           title="Ferris Wheel 3D"
           link="#model"
           number={1}
           direction="ltr"
         />
-        <p className="model__description">
+        <p className={styles.description}>
           I have been interested in introducing 3D to websites for a long time and in the past my
           hobby was 3D modeling.
         </p>
-        <p className="model__description">
+        <p className={styles.description}>
           In my study project on Three.js I wanted to try adding my{" "}
           <a
-            className="model__link inline-link"
+            className={cn(styles.link, "inline-link")}
             href="https://sketchfab.com/3d-models/ferris-wheel-675ab80b477b40f280b7311f81fee730"
             target="_blank"
             rel="noreferrer"
@@ -129,7 +131,7 @@ export default function FerrisWheel() {
           </a>{" "}
           to the site
         </p>
-        <div className="model__container">
+        <div className={cn(styles.container, "container")}>
           <Suspense fallback={<Spinner />}>
             <Controls.Provider>
               <Controls.Canvas>
@@ -138,7 +140,7 @@ export default function FerrisWheel() {
               <Controls
                 title="Lighting Control"
                 collapsed={true}
-                width={250}
+                width={260}
                 anchor={"bottom_right"}
               />
             </Controls.Provider>

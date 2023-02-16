@@ -4,7 +4,7 @@
   "version": "0.2.0",
   "private": false,
   "homepage": "./",
-  "repository": "https://github.com/davidaganov21/3d-ferris-wheel",
+  "repository": "https://github.com/davidaganov/3d-ferris-wheel",
   "license": "MIT",
   "author": {
     "name": "David Aganov",
@@ -19,9 +19,12 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/testing-library__jest-dom": "^5.14.5",
     "classnames": "^2.3.2",
-    "gh-pages": "^4.0.0",
-    "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -29,8 +32,23 @@
     "react-three-gui": "^0.4.2",
     "sass": "^1.55.0",
     "three": "^0.145.0",
-    "uuid": "^9.0.0",
+    "typescript": "^4.9.3",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@types/three": "^0.149.0",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^4.0.0",
+    "prettier": "^2.7.1",
+    "typescript-plugin-css-modules": "^4.1.1"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -56,6 +74,16 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "./src/**/*.(tsx|ts)",
+      "!**/node_modules/**",
+      "!./src/index.tsx",
+      "!./src/**/?(*.)+(props|d).ts",
+      "!./src/components/index.ts",
+      "!./src/interfaces/**"
     ]
   }
 }
